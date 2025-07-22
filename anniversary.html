@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Months Anniversary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide {
+            display: none;
+            animation: fade 1s ease-in-out;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #ffffff, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #cccccc;
+            max-width: 800px;
+        }
+
+        .highlight {
+            color: #ff69b4;
+            font-weight: bold;
+        }
+
+        .date-display {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #999999;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        button:hover {
+            background: rgba(255, 105, 180, 0.2);
+            border-color: #ff69b4;
+        }
+
+        #progress-container {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+            border-radius: 2px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #ff69b4, #ffffff);
+            transition: width 0.5s;
+            border-radius: 2px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .timeline-item {
+            padding: 20px 0 20px 40px;
+            position: relative;
+            border-left: 2px solid #ff69b4;
+            margin-bottom: 20px;
+        }
+
+        .timeline-date {
+            color: #ff69b4;
+            font-weight: 500;
+        }
+
+        .timeline-content {
+            margin-top: 10px;
+        }
+
+        .moving-apology {
+            font-size: 1.8rem;
+            color: #ff69b4;
+            margin: 30px 0;
+            animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px rgba(255,105,180,0.5); }
+            to { text-shadow: 0 0 15px rgba(255,105,180,0.8); }
+        }
+
+        @keyframes fade {
+            from {opacity: 0.4;}
+            to {opacity: 1;}
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            =======
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide active">
+            <div class="date-display">6 Months Anniversary • July 24, 2025</span></div>
+            <h1>Six Months Together</h1>
+            <p>These past six months have been filled with love, laughter, and sorrow all shared together. </p>
+            <p>Every moment with you is a <span class="highlight">treasure</span> and have a special place in my heart</p>
+            
+        </div>
+
+        <div class="slide">
+            <div class="date-display">6 Months Anniversary • July 24, 2025</span></div>
+            <h1>Our Journey</h1>
+            <p>From our first meeting to today, every step has been <span class="highlight">magical</span>.</p>
+            <p>182 days of growing together, learning more about each other, and falling deeper in love.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">December 9, 2024</div>
+                    <div class="timeline-content">We match at leo</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">January 24, 2025</div>
+                    <div class="timeline-content">We OFFICIALY being a couple</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">and on this day, july 24, 2025.</div>
+                    <div class="timeline-content">genap 6 bulan setelah kita pacaran, aku ga pernah nyangka kalau kita bakal survive selama ini
+					apalagi di hari itu kita sempat berantam dengan hebat, i thought that day will be the end of our journey :( </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="date-display">6 Months Anniversary • July 24, 2025</span></div>
+            <h1>OH YA, KM HRS REPLY KELUH DAN KESAH KAMU AFTER SPENDING 6 MONTHS TOGETHER!</h1>
+            <p>kadang rasanya tuh berat banget, i feel like kita chattingan cuma sekedar formalitas aja (?) tapi aku coba untuk mengerti, dan ya akhirnya aku terbiasa</p>
+            <p>tapi itu semua bukan jadi alasan untuk aku ngelepas kamu, ntah kenapa day by day my love is deeper, i think aku udh kecintaan ya. I want to say sorry
+			kalau kamu merasa aku ga bisa memahami kondisi kamu dengan baik, trust me i've been try my best. terlepas dari itu semua i wanna say Terima kasih udah jadi bagian dari hidup aku,
+			udah mau survive bareng" dan tetap bertahan walaupun kamu capek. I'm very proud of you, Sayang. </p>
+            
+          
+        </div>
+
+        <div class="slide">
+            <div class="date-display">6 Months Anniversary • July 24, 2025</span></div>
+            <h1>Ni penutupan (jujur buntu)</h1>
+            <p>mungkin effort aku belum cukup besar untuk kamu, tapi aku bakal coba utk lebih baik. And trust me i always try my best sayang. Mungkin ini gaada apa"nya untuk kamu, tapi aku buat ini sepenuh hati 
+			agar kamu ngerasa dicintai sepenuhnya oleh aku. Jangan pernah ngerasa sendirian ya, remember that u have me and i'll always by ur side.</p>
+            <p>Let's grow together until we have our dream family and living together.</p>
+            
+            <div class="moving-apology"> I love u manusia sok kul</div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <h2 style="margin-bottom: 20px;">Happy 6 Months Sayangku</h2>
+                <p>I hope we'll never be end. And I hope i never lose you either</p>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
+
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.querySelectorAll('[id^="current-date"]').forEach(el => {
+            el.textContent = today.toLocaleDateString('en-US', options);
+        });
+
+        // Slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const progressBar = document.getElementById('progress-bar');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            progressBar.style.width = `${(index + 1) / totalSlides * 100}%`;
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        // Auto-advance slides every 10 seconds
+        let slideInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }, 10000);
+
+        // Pause auto-advance when mouse enters container
+        document.querySelector('.container').addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+
+        // Resume auto-advance when mouse leaves
+        document.querySelector('.container').addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }, 10000);
+        });
+
+        // Touch events for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchStartX - touchEndX > 50) {
+                // Swipe left - next
+                currentSlide = (currentSlide + 1) % totalSlides;
+            } else if (touchEndX - touchStartX > 50) {
+                // Swipe right - prev
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            }
+            showSlide(currentSlide);
+        }
+
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
+
